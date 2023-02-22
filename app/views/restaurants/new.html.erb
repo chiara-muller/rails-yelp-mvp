@@ -1,0 +1,10 @@
+<%= simple_form_for(@restaurants) do |f| %>
+  <%= f.input :name %>
+  <%= f.input :address %>
+  <%= f.input :phone_number %>
+  <%= f.input :category, collection: Restaurant::CATEGORIES %>
+  <%= f.button :submit %>
+<% end %>
+<%= link_to restaurants_path do %>
+  <i class="fa-solid fa-arrow-rotate-left"></i> Back to list
+<% end %>
